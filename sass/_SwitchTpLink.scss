@@ -1,0 +1,169 @@
+// SwitchTpLink start
+
+.SwitchTpLink{
+    position: relative;
+    margin-bottom: 100px;
+
+    &__mrx2{
+       width: 500px;
+       height: 200px;
+       .slick-arrow{
+         font-size: 0;
+         width: 0;
+         height: 0;
+       }
+    }
+
+    &__mrx1{
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        .slick-arrow{
+            width: 0;
+            height: 0;
+            font-size: 0;
+       }
+    }
+
+    &__item2{
+        
+        position: relative;
+        cursor: pointer;
+        margin-top: 20px;
+        
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+        }
+    }
+
+
+    &__item{
+        width: auto;
+        height: auto;
+        padding: 30px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+
+        img{
+            width: 440px;
+            height: 440px;
+            object-fit: scale-down;
+        }
+    }
+
+    &__slaeder{
+        float: left;
+        margin-right: 60px;
+    }
+    
+
+    &__text{
+        @include fontAll(18px,400,$text);
+        line-height: 30px;
+        padding: 20px 0;
+        text-align:justify;
+    }
+
+    &__item__link{
+        @include fontAll(12px,600,$link);
+        background-color:#4F95E5;
+        padding: 18px 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+        display: inline-block;
+        margin-top: 30px;
+    }
+}
+
+// SwitchTpLink end
+
+
+
+@media (max-width:1100px){
+    .SwitchTpLink__slaeder {
+        margin-right: 40px;
+    }
+
+    .SwitchTpLink{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media (max-width:1000px){
+    .SwitchTpLink__mrx1{
+        width: 400px;
+        height: 400px;
+    }
+
+    .SwitchTpLink__mrx2{
+         width: 400px !important;
+    }
+
+    .SwitchTpLink__item2 img{
+        width: auto !important;
+        height: 130px !important;
+    }
+
+    .SwitchTpLink__slaeder {
+       margin-right: 30px;
+    }
+
+    .SwitchTpLink__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+}
+
+@media (max-width:800px){
+    .SwitchTpLink__slaeder {
+        float: unset;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+     .SwitchTpLink__mrx1{
+        width: 100%;
+        height: auto;
+    }
+
+    .SwitchTpLink__item img{
+        width: 100%;
+    }
+
+     .SwitchTpLink__mrx2{
+         width: auto !important;
+    }
+
+    .SwitchTpLink__text {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width:500px){
+    .SwitchTpLink {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width:380px){
+    .SwitchTpLink__item2 img{
+        width: auto !important;
+        height: 100px !important;
+    }
+
+     .SwitchTpLink__text {
+        font-size: 14px;
+    }
+}

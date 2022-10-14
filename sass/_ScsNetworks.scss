@@ -1,0 +1,223 @@
+// SCS networks start
+
+.SCSnetworks{
+    position: relative;
+    margin-bottom: 100px;
+
+    &__pro{
+        margin-top: 40px;
+    }
+
+    &__img{
+        position: relative;
+        @include fiximg(100%,400px,true);
+        margin-bottom: 40px;
+    }
+
+    &__img__text{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+
+        img{
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+    }
+
+    &__title__h4{
+        @include fontAll(20px,600,$link);
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-top: 25px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    &__text{
+        @include fontAll(18px,400,$text);
+        line-height: 30px;
+        a{
+            color: #4F95E5;
+        }
+
+        strong{
+            font-weight: 400;
+        }
+
+        margin-bottom: 40px;
+    }
+
+    &__max__img{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        grid-gap: 50px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+    }
+
+    &__max__img__item{
+        flex: 0 0 47%;
+        @include fiximg(100%,auto,true);
+    }
+
+    &__button{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+    &__button__link{
+        @include fontAll(12px,600,$link);
+        padding: 18px 25px;
+        background-color: #4F95E5;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+        text-transform: uppercase;
+    }
+}
+
+// SCS networks end
+
+
+@media (max-width:1100px){
+    .SCSnetworks__img{
+        height: 300px;
+    }
+
+    .SCSnetworks {
+        margin-bottom: 50px;
+    }
+
+    .SCSnetworks__text {
+        font-size: 16px;
+    }
+
+    .SCSnetworks__img,
+    .SCSnetworks__text,
+    .SCSnetworks__max__img,
+    .SCSnetworks__pro{
+        margin-bottom: 30px;
+    }
+
+    .SCSnetworks__max__img {
+        grid-gap:30px;
+    }
+
+    .SCSnetworks__max__img__item {
+        flex: 0 0 48%;
+    }
+
+    .SCSnetworks__title__h4 {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width:950px){
+    .SCSnetworks__max__img__item {
+        flex: 0 0 47%;
+    }
+
+    .SCSnetworks__img__text img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .SCSnetworks__img{
+        height: 250px;
+    }
+}
+
+
+@media (max-width:800px){
+    .SCSnetworks__title__h4 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}
+
+
+
+@media (max-width:600px){
+    .SCSnetworks__max__img{
+        flex-direction: column;
+    }
+
+
+    .SCSnetworks__img,
+    .SCSnetworks__text,
+    .SCSnetworks__max__img,
+    .SCSnetworks__pro{
+        margin-bottom: 20px;
+    }
+
+    .SCSnetworks__pro{
+        margin-top: 30px;
+    }
+
+    .SCSnetworks__img {
+        height: 200px;
+    }
+}
+
+
+@media (max-width:500px){
+    .SCSnetworks {
+        margin-bottom: 30px;
+    }
+
+    .SCSnetworks__pro{
+        margin-top: 20px;
+    }
+
+    .SCSnetworks__img__text img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width:400px){
+    .SCSnetworks__img {
+        height: 170px;
+    }
+
+    .SCSnetworks__text {
+        font-size: 14px;
+    }
+
+    .SCSnetworks__button__link {
+        padding: 15px 20px;
+    }
+}
+
+
+@media (max-width:360px){
+    .SCSnetworks__title__h4 {
+        font-size: 14px;
+    }
+
+    .SCSnetworks__img__text img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .SCSnetworks__img {
+        height: 150px;
+    } 
+}

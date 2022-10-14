@@ -1,0 +1,217 @@
+// Contacts start
+
+   .Contacts{
+       position: relative;
+       margin-bottom: 100px;
+
+       &__menu{
+           li+li{
+               margin-top: 20px;
+           }
+       }
+
+       &__title__h5{
+           @include fontAll(14px,700,#4F95E5);
+           line-height: 100%;
+           padding-bottom: 15px;
+       }
+
+       &__link{
+           @include fontAll(18px,600,$text);
+           line-height: 100%;
+       }
+
+       &__item{
+           width: 50%;
+           flex: 0 0 50%;
+
+           form{
+               margin-top: 30px;
+           }
+       }
+
+       &__top{
+           display: flex;
+           align-items: flex-start;
+           grid-gap: 40px;
+           justify-content: space-between;
+       }
+
+       &__item__form{
+           display: flex;
+           align-items:center;
+           justify-content: space-between;
+           grid-gap: 20px;
+           width: 100%;
+       }
+
+       &__item__input{
+           background-color: rgba(26, 47, 72, 0.06);
+           border-radius: 30px;
+           margin-bottom: 30px;
+           width: 100%;
+           height: 50px;
+           outline: none;
+           border: none;
+           padding: 15px 25px;
+           -webkit-border-radius: 30px;
+           -moz-border-radius: 30px;
+           -ms-border-radius: 30px;
+           -o-border-radius: 30px;
+           @include fontAll(16px,400,$text);
+           line-height: 100%;
+
+           &::placeholder{
+               @include fontAll(16px,400,$text);
+               line-height: 100%;
+           }
+        }
+
+        &__item__textarea{
+            background-color: rgba(26, 47, 72, 0.06);
+            border-radius: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 120px;
+            outline: none;
+            resize: none;
+            border: none;
+           padding: 15px 25px;
+           -webkit-border-radius: 30px;
+           -moz-border-radius: 30px;
+           -ms-border-radius: 30px;
+           -o-border-radius: 30px;
+           @include fontAll(16px,400,$text);
+           line-height: 100%;
+           
+           &::placeholder{
+               @include fontAll(16px,400,$text);
+               line-height: 100%;
+           }
+        }
+
+        &__item__button{
+            background-color:#4F95E5;
+            border-radius: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            -o-border-radius: 40px;
+            @include fontAll(12px,600,$link);
+            text-transform: uppercase;
+            padding: 18px 26px;
+            outline: none;
+            border: none;
+            margin-top: 20px;
+        }
+
+        &__title__h2{
+            @include fontAll(30px,700,$text);
+            line-height: 100%;
+        }
+   }
+
+// Contacts end
+
+
+// cards start
+
+.cards{
+    position: relative;
+    &__top{
+        iframe{
+            width: 100%;
+            height: 500px;
+        }
+    }
+}
+
+// cards end
+
+
+
+@media (max-width:1100px){
+    .Contacts {
+        margin-bottom: 60px;
+    }
+
+    .cards__top iframe {
+        height: 400px;
+    }
+
+    .Contacts__link {
+        font-size: 16px;
+    }
+
+    .Contacts__title__h2 {
+        font-size: 28px;
+    }
+
+    .Contacts__item__button{
+        margin-top: 0;
+    }
+
+    .Contacts__top {
+        grid-gap: 10px;
+    }
+}
+
+
+
+@media (max-width:800px){
+    .Contacts__top{
+        flex-direction: column;
+    }
+
+    .Contacts__item {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .Contacts__item__button {
+        width: 100%;
+    }
+
+    .Contacts__menu{
+        margin-bottom: 20px;
+    }
+
+    .cards__top iframe {
+        height: 350px;
+    }
+}
+
+
+@media (max-width:500px){
+    .Contacts {
+        margin-bottom: 30px;
+    }
+
+    .Contacts__item__form{
+        flex-direction: column;
+        grid-gap: 0;
+    }
+
+    .cards__top iframe {
+       height: 300px;
+    }
+
+    .Contacts__title__h2 {
+       font-size: 26px;
+    }
+}
+
+
+@media (max-width:380px){
+    .cards__top iframe {
+       height: 250px;
+    }
+
+    .Contacts__item__textarea {
+        height: 100px;
+    }
+
+    .Contacts__item__input {
+        height: 45px;
+    }
+}
