@@ -6,7 +6,8 @@
 
     &__mrx2{
        width: 500px;
-       height: 200px;
+       height: 150px;
+       margin-top: 30px;
        .slick-arrow{
          font-size: 0;
          width: 0;
@@ -27,19 +28,24 @@
     }
 
     &__item2{
-        
         position: relative;
         cursor: pointer;
-        margin-top: 20px;
+        @include fiximg(150px,150px,true);
+        margin: 0 10px;
+        
         
         img{
             object-fit: cover;
+            padding: 8px;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+            background-color:#f5f5f5;
         }
     }
 
+    &__item__max{
+        height: auto !important;
+    }
 
     &__item{
         width: auto;
@@ -79,9 +85,38 @@
         -ms-border-radius: 40px;
         -o-border-radius: 40px;
         display: inline-block;
-        margin-top: 30px;
+        margin-top: 20px;
+    }
+
+    &__title__text{
+        @include fontAll(20px,600,$text);
+        line-height: 125%;
+        float: left;
+        margin-right: 5px;
+    }
+
+    &__contint{
+        padding:0;
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+
+    &__h3__title{
+        @include fontAll(20px,600,#3cdb3c);
+        line-height: 125%;
+        display: none;
+        margin-bottom: 10px;
     }
 }
+
+.SwitchTpLink__active .active{
+    display: block;
+}
+
 
 // SwitchTpLink end
 
@@ -97,7 +132,6 @@
     }
 }
 
-
 @media (max-width:1000px){
     .SwitchTpLink__mrx1{
         width: 400px;
@@ -111,6 +145,10 @@
     .SwitchTpLink__item2 img{
         width: auto !important;
         height: 130px !important;
+    }
+
+    .SwitchTpLink__mrx2 {
+        height: 130px;
     }
 
     .SwitchTpLink__slaeder {
@@ -149,13 +187,15 @@
     }
 }
 
-
 @media (max-width:500px){
     .SwitchTpLink {
         margin-bottom: 30px;
     }
-}
 
+    .SwitchTpLink__title__text{
+        float: inherit;
+    }
+}
 
 @media (max-width:380px){
     .SwitchTpLink__item2 img{
@@ -163,7 +203,11 @@
         height: 100px !important;
     }
 
-     .SwitchTpLink__text {
+    .SwitchTpLink__mrx2 {
+        height: 100px;
+    }
+
+    .SwitchTpLink__text {
         font-size: 14px;
     }
 }
